@@ -10,25 +10,88 @@ st.title("U.S. Car Theft Analysis")
 
 
 @st.cache_data
-def load_car_data():
-    default_path = "Data/2015_State_Top10Report_wTotalThefts.csv"
-
-    if os.path.exists(default_path):
-        df = pd.read_csv(default_path)
+def load_car_data(
+    file_path: str = "Data/2015_State_Top10Report_wTotalThefts.csv",
+) -> pd.DataFrame:
+    if os.path.exists(file_path):
+        df = pd.read_csv(file_path)
     else:
         uploaded_file = st.file_uploader("Upload your CSV file", type=["csv"])
         if uploaded_file:
             df = pd.read_csv(uploaded_file)
         else:
+            st.warning("Please upload the CSV file or place it in the Data/ folder.")
             st.stop()
 
     df["Thefts"] = pd.to_numeric(
         df["Thefts"].astype(str).str.replace(",", ""), errors="coerce"
     ).fillna(0)
+
+    # Clean State names (this is the key fix)
     df = df.dropna(subset=["State"])
-    df["State"] = df["State"].astype(str)
+    df["State"] = df["State"].astype(str).str.strip().str.title()
 
     return df
+
+
+# total thefts by state.
+def get_thefts_by_state(df: pd.DataFrame) -> pd.DataFrame:
+    return (
+        df.groupby("State")["Thefts"]
+        .sum()
+        .reset_index()
+        .sort_values("Thefts", ascending=False)
+    )
+
+
+# Calculate thefts per 100k residents.
+def get_theft_rates(thefts_by_state: pd.DataFrame, population: dict) -> pd.DataFrame:
+    pop_df = pd.DataFrame(population.items(), columns=["State", "Population"])
+
+    # Clean population state names too
+    pop_df["State"] = pop_df["State"].str.strip().str.title()
+
+    # Use inner join so we only keep states that have population data
+    rates = thefts_by_state.merge(pop_df, on="State", how="inner")
+
+    rates["Thefts_per_100k"] = (rates["Thefts"] / rates["Population"] * 100_000).round(
+        2
+    )
+
+    rates = rates.sort_values("Thefts_per_100k", ascending=False)
+    return rates
+
+
+# Most stolen vehicles by model (all years combined).
+def get_most_stolen_overall(df: pd.DataFrame) -> pd.DataFrame:
+    return (
+        df.groupby("Make/Model")["Thefts"]
+        .sum()
+        .sort_values(ascending=False)
+        .reset_index()
+    )
+
+
+# Most stolen vehicle in each state.
+def get_most_stolen_by_state(df: pd.DataFrame) -> pd.DataFrame:
+    return (
+        df.loc[df.groupby("State")["Thefts"].idxmax()][
+            ["State", "Make/Model", "Thefts"]
+        ]
+        .sort_values("State")
+        .reset_index(drop=True)
+    )
+
+
+# Least stolen vehicle in each state.
+def get_least_stolen_by_state(df: pd.DataFrame) -> pd.DataFrame:
+    return (
+        df.loc[df.groupby("State")["Thefts"].idxmin()][
+            ["State", "Make/Model", "Thefts"]
+        ]
+        .sort_values("State")
+        .reset_index(drop=True)
+    )
 
 
 car_df = load_car_data()
@@ -86,9 +149,8 @@ population = {
     "Wyoming": 586107,
     "District of Columbia": 672228,
 }
-pop_df = pd.DataFrame(population.items(), columns=["State", "Population"])
 
-state_code = {
+STATE_CODE = {
     "Alabama": "AL",
     "Alaska": "AK",
     "Arizona": "AZ",
@@ -142,86 +204,36 @@ state_code = {
     "District of Columbia": "DC",
 }
 
-thefts_by_state = (
-    car_df.groupby("State")["Thefts"]
-    .sum()
-    .reset_index()
-    .sort_values("Thefts", ascending=False)
-)
+st.set_page_config(page_title="U.S. Car Theft Analysis", layout="wide")
+st.title("U.S. Car Theft Analysis Dashboard")
 
-thefts_rate = thefts_by_state.merge(pop_df, on="State", how="left")
-thefts_rate["Thefts_per_100k"] = (
-    thefts_rate["Thefts"] / thefts_rate["Population"] * 100_000
-).round(2)
-thefts_rate = thefts_rate.sort_values("Thefts_per_100k", ascending=False)
-thefts_rate["State_Code"] = thefts_rate["State"].map(state_code)
+car_df = load_car_data()
 
-# Most Stolen overall
-most_stolen_year = (
-    car_df.groupby(
-        [
-            "Make/Model",
-            "Model Year",
-        ]
-    )["Thefts"]
-    .sum()
-    .sort_values(ascending=False)
-    .reset_index()
-)
+# Process data using reusable functions
+thefts_by_state = get_thefts_by_state(car_df)
+thefts_rate = get_theft_rates(thefts_by_state, population)
+thefts_rate["State_Code"] = thefts_rate["State"].map(STATE_CODE)
 
-# Most/least stolen by model
-most_stolen_model = (
-    car_df.groupby("Make/Model")["Thefts"]
-    .sum()
-    .sort_values(ascending=False)
-    .reset_index()
-)
-least_stolen_model = (
-    car_df.groupby("Make/Model")["Thefts"]
-    .sum()
-    .sort_values(ascending=True)
-    .reset_index()
-)
+most_stolen_model = get_most_stolen_overall(car_df)
+most_stolen_by_state = get_most_stolen_by_state(car_df)
+least_stolen_by_state = get_least_stolen_by_state(car_df)
 
-# Most stolen vehicle per state
-most_stolen_by_state = (
-    car_df.loc[car_df.groupby("State")["Thefts"].idxmax()][
-        ["State", "Make/Model", "Thefts"]
-    ]
-    .sort_values("State")
-    .reset_index(drop=True)
-)
-
-# Least stolen among the top 10 reported per state
-least_stolen_by_state = (
-    car_df.loc[car_df.groupby("State")["Thefts"].idxmin()][
-        ["State", "Make/Model", "Thefts"]
-    ]
-    .sort_values("State")
-    .reset_index(drop=True)
-)
-
-# SIDEBAR - INTERACTIVE CONTROLS
 st.sidebar.header("Controls")
-
-top_n = st.sidebar.slider("Show Top N states in tables", 5, 20, 10)
-
+top_n = 10
 selected_state = st.sidebar.selectbox(
-    "Deep Dive into a Specific State",
+    "Deep Dive into a State",
     options=["All States"] + sorted(car_df["State"].unique()),
-    index=0,
 )
-
-st.sidebar.markdown("---")
 
 col1, col2, col3, col4 = st.columns(4)
 col1.metric("Total Reported Thefts", f"{thefts_by_state['Thefts'].sum():,.0f}")
 col2.metric("Highest Theft Rate State", thefts_rate.iloc[0]["State"])
 col3.metric("Highest Rate (per 100k)", f"{thefts_rate.iloc[0]['Thefts_per_100k']:.1f}")
-col3.metric("Most Stolen Model Overall", most_stolen_model.iloc[0]["Make/Model"])
+col4.metric("Most Stolen Model", most_stolen_model.iloc[0]["Make/Model"])
 
 st.markdown("---")
 
+# ---------------- TABS ----------------
 tab1, tab2, tab3, tab4, tab5 = st.tabs(
     [
         "State Theft Totals",
@@ -236,7 +248,7 @@ with tab1:
     st.header("Total Car Thefts by State")
     st.dataframe(thefts_by_state.head(top_n), use_container_width=True, hide_index=True)
 
-    fig_bar = px.bar(
+    fig = px.bar(
         thefts_by_state.head(top_n),
         x="State",
         y="Thefts",
@@ -244,9 +256,8 @@ with tab1:
         color="Thefts",
         color_continuous_scale="YlOrRd",
     )
-    st.plotly_chart(fig_bar, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=True)
 
-# TAB 2: Per Capita Rate + Map
 with tab2:
     st.header("Car Theft Rate per 100,000 Residents")
     st.dataframe(
@@ -255,7 +266,7 @@ with tab2:
         hide_index=True,
     )
 
-    fig_rate = px.choropleth(
+    fig = px.choropleth(
         thefts_rate,
         locations="State_Code",
         locationmode="USA-states",
@@ -263,84 +274,28 @@ with tab2:
         scope="usa",
         color_continuous_scale="Reds",
         hover_name="State",
-        hover_data={"Thefts_per_100k": ":.2f", "Thefts": True, "Population": ":.0f"},
-        title="Car Theft Rate per 100,000 Residents by State",
+        title="Theft Rate per 100,000 Residents",
     )
-    fig_rate.update_layout(
-        title_font_size=18, coloraxis_colorbar_title="Thefts per 100k"
-    )
-    st.plotly_chart(fig_rate, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=True)
 
-# TAB 3: Most Stolen Overall
 with tab3:
     st.header("Most Stolen Vehicles Nationwide")
+    st.dataframe(most_stolen_model.head(15), use_container_width=True, hide_index=True)
 
-    st.subheader("By Specific Model and Year")
-    st.dataframe(most_stolen_year.head(15), use_container_width=True, hide_index=True)
-
-    st.subheader("By Model")
-    fig_model = px.bar(
-        most_stolen_model.head(15),
-        x="Make/Model",
-        y="Thefts",
-        title="Top 15 Most Stolen Models",
-        color="Thefts",
-        color_continuous_scale="Blues",
-    )
-    st.plotly_chart(fig_model, use_container_width=True)
-
-# TAB 4: Most Stolen by State + Map
 with tab4:
     st.header("Most Stolen Vehicle by State")
     st.dataframe(
-        most_stolen_by_state.head(top_n), use_container_width=True, hide_index=True
+        most_stolen_by_state.head(51), use_container_width=True, hide_index=True
     )
 
-    most_map = most_stolen_by_state.merge(
-        thefts_rate[["State", "State_Code"]], on="State", how="left"
-    )
-
-    fig_most = px.choropleth(
-        most_map,
-        locations="State_Code",
-        locationmode="USA-states",
-        color="Make/Model",
-        scope="usa",
-        hover_name="State",
-        hover_data={"Make/Model": True, "Thefts": True},
-        title="Most Stolen Vehicle by State",
-        color_discrete_sequence=px.colors.qualitative.Set2,
-    )
-    fig_most.update_layout(title_font_size=18, legend_title_text="Most Stolen Model")
-    st.plotly_chart(fig_most, use_container_width=True)
-
-# TAB 5: Least Stolen by State + Map
 with tab5:
     st.header("Least Stolen Vehicle by State")
-    st.caption("Note: This shows the model with the lowest theft count for each state.")
     st.dataframe(
-        least_stolen_by_state.head(top_n), use_container_width=True, hide_index=True
+        least_stolen_by_state.head(50), use_container_width=True, hide_index=True
     )
 
-    least_map = least_stolen_by_state.merge(
-        thefts_rate[["State", "State_Code"]], on="State", how="left"
-    )
 
-    fig_least = px.choropleth(
-        least_map,
-        locations="State_Code",
-        locationmode="USA-states",
-        color="Make/Model",
-        scope="usa",
-        hover_name="State",
-        hover_data={"Make/Model": True, "Thefts": True},
-        title="Least Stolen Vehicle by State",
-        color_discrete_sequence=px.colors.qualitative.Pastel,
-    )
-    fig_least.update_layout(title_font_size=18, legend_title_text="Least Stolen Model")
-    st.plotly_chart(fig_least, use_container_width=True)
-
-
+# ---------------- STATE DEEP DIVE ----------------
 if selected_state != "All States":
     st.markdown("---")
     st.header(f"Deep Dive: {selected_state}")
@@ -350,7 +305,6 @@ if selected_state != "All States":
     )
 
     col_a, col_b = st.columns(2)
-
     with col_a:
         st.subheader("Top Models in This State")
         st.dataframe(
@@ -365,9 +319,7 @@ if selected_state != "All States":
             st.metric(
                 "Thefts per 100k", f"{state_rate['Thefts_per_100k'].values[0]:.2f}"
             )
-            st.metric(
-                "Total Thefts (reported)", f"{state_rate['Thefts'].values[0]:,.0f}"
-            )
+            st.metric("Total Thefts", f"{state_rate['Thefts'].values[0]:,.0f}")
             st.metric(
                 "Most Stolen Model",
                 most_stolen_by_state[most_stolen_by_state["State"] == selected_state][

@@ -23,7 +23,3 @@ This dashboard was built to analyze and communicate patterns in vehicle theft da
 ## How to Run the Dashboard
 
 1. Clone or download this repository
-2. Install the required packages:
-
-```bash
-pip install streamlit pandas plotly
