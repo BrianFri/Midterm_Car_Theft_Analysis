@@ -1,0 +1,511 @@
+index,State,Rank,Make/Model,Model Year,Thefts
+0,Alabama,1,Ram 1500,2019,861
+1,Alabama,2,Hyundai Sonata,2020,771
+2,Alabama,3,Nissan Altima,2023,702
+3,Alabama,4,Chevrolet Silverado 1500,2020,704
+4,Alabama,5,Ford Explorer,2021,650
+5,Alabama,6,Honda Civic,2022,557
+6,Alabama,7,Ford F-150,2023,516
+7,Alabama,8,Kia Optima,2019,490
+8,Alabama,9,Nissan Sentra,2019,464
+9,Alabama,10,Chevrolet Tahoe,2021,377
+10,Alaska,1,Dodge Charger,2022,149
+11,Alaska,2,Acura Integra,2021,140
+12,Alaska,3,Nissan Sentra,2020,138
+13,Alaska,4,Ram 1500,2020,132
+14,Alaska,5,Jeep Grand Cherokee,2020,123
+15,Alaska,6,Toyota RAV4,2023,98
+16,Alaska,7,Tesla Model 3,2023,95
+17,Alaska,8,Chevrolet Tahoe,2022,88
+18,Alaska,9,Toyota Corolla,2023,88
+19,Alaska,10,Subaru Outback,2023,79
+20,Arizona,1,Kia Optima,2021,1533
+21,Arizona,2,Subaru Outback,2022,1453
+22,Arizona,3,Ram 1500,2020,1248
+23,Arizona,4,Dodge Charger,2021,1191
+24,Arizona,5,Ford F-150,2023,1068
+25,Arizona,6,Chevrolet Malibu,2021,1031
+26,Arizona,7,Toyota Corolla,2021,992
+27,Arizona,8,Honda CR-V,2023,922
+28,Arizona,9,Honda Civic,2022,856
+29,Arizona,10,Chevrolet Tahoe,2021,753
+30,Arkansas,1,Hyundai Elantra,2020,587
+31,Arkansas,2,Hyundai Sonata,2020,467
+32,Arkansas,3,Tesla Model 3,2022,500
+33,Arkansas,4,Chevrolet Silverado 1500,2022,455
+34,Arkansas,5,Honda CR-V,2023,370
+35,Arkansas,6,Chevrolet Malibu,2021,358
+36,Arkansas,7,Chevrolet Tahoe,2020,308
+37,Arkansas,8,Kia Optima,2019,289
+38,Arkansas,9,Dodge Charger,2022,296
+39,Arkansas,10,Toyota Camry,2021,273
+40,California,1,Hyundai Sonata,2020,17907
+41,California,2,Ram 1500,2022,17919
+42,California,3,Chevrolet Silverado 1500,2023,15105
+43,California,4,Acura Integra,2021,13295
+44,California,5,Honda CR-V,2022,12477
+45,California,6,Tesla Model 3,2024,11858
+46,California,7,Ford Explorer,2020,10654
+47,California,8,Subaru Outback,2020,11129
+48,California,9,Hyundai Elantra,2021,9740
+49,California,10,Kia Forte,2021,9163
+50,Colorado,1,Honda Accord,2020,1018
+51,Colorado,2,Jeep Grand Cherokee,2023,975
+52,Colorado,3,Nissan Altima,2020,827
+53,Colorado,4,Tesla Model 3,2023,855
+54,Colorado,5,Ram 1500,2020,804
+55,Colorado,6,Kia Forte,2021,655
+56,Colorado,7,Toyota Camry,2022,609
+57,Colorado,8,Chevrolet Malibu,2022,563
+58,Colorado,9,Toyota RAV4,2023,527
+59,Colorado,10,Honda CR-V,2024,498
+60,Connecticut,1,Chevrolet Malibu,2022,702
+61,Connecticut,2,Acura Integra,2024,565
+62,Connecticut,3,Ram 1500,2020,508
+63,Connecticut,4,Tesla Model 3,2021,535
+64,Connecticut,5,Honda Civic,2020,466
+65,Connecticut,6,Dodge Charger,2019,435
+66,Connecticut,7,Subaru Outback,2022,412
+67,Connecticut,8,Kia Forte,2021,377
+68,Connecticut,9,Hyundai Sonata,2020,331
+69,Connecticut,10,Honda CR-V,2022,313
+70,Delaware,1,Jeep Grand Cherokee,2021,272
+71,Delaware,2,Kia Forte,2020,249
+72,Delaware,3,Nissan Sentra,2020,215
+73,Delaware,4,Chevrolet Silverado 1500,2023,187
+74,Delaware,5,GMC Sierra 1500,2021,184
+75,Delaware,6,Dodge Charger,2019,181
+76,Delaware,7,Nissan Altima,2021,152
+77,Delaware,8,Hyundai Elantra,2022,145
+78,Delaware,9,Chevrolet Tahoe,2021,126
+79,Delaware,10,Chevrolet Malibu,2022,126
+80,District of Columbia,1,Ford Explorer,2022,438
+81,District of Columbia,2,GMC Sierra 1500,2020,405
+82,District of Columbia,3,Chevrolet Malibu,2019,373
+83,District of Columbia,4,Chevrolet Silverado 1500,2022,369
+84,District of Columbia,5,Dodge Charger,2022,320
+85,District of Columbia,6,Hyundai Elantra,2020,284
+86,District of Columbia,7,Kia Forte,2021,276
+87,District of Columbia,8,Nissan Sentra,2021,270
+88,District of Columbia,9,Honda Civic,2021,237
+89,District of Columbia,10,Nissan Altima,2022,228
+90,Florida,1,Ford F-150,2023,4936
+91,Florida,2,Toyota Corolla,2023,4091
+92,Florida,3,Honda Accord,2020,3818
+93,Florida,4,Dodge Charger,2019,3941
+94,Florida,5,GMC Sierra 1500,2022,3679
+95,Florida,6,Hyundai Elantra,2019,2986
+96,Florida,7,Hyundai Sonata,2020,2958
+97,Florida,8,Chevrolet Silverado 1500,2020,2538
+98,Florida,9,Honda Civic,2021,2402
+99,Florida,10,Jeep Grand Cherokee,2023,2428
+100,Georgia,1,Ram 1500,2020,2728
+101,Georgia,2,Jeep Grand Cherokee,2021,2657
+102,Georgia,3,Kia Optima,2021,2301
+103,Georgia,4,Toyota Corolla,2020,2054
+104,Georgia,5,Subaru Outback,2023,1970
+105,Georgia,6,Ford Explorer,2022,1803
+106,Georgia,7,Acura Integra,2024,1618
+107,Georgia,8,Nissan Sentra,2020,1454
+108,Georgia,9,GMC Sierra 1500,2023,1411
+109,Georgia,10,Nissan Altima,2021,1383
+110,Hawaii,1,Chevrolet Tahoe,2021,336
+111,Hawaii,2,Dodge Charger,2022,323
+112,Hawaii,3,Ford Explorer,2021,305
+113,Hawaii,4,Jeep Grand Cherokee,2020,282
+114,Hawaii,5,Chevrolet Silverado 1500,2023,248
+115,Hawaii,6,Ram 1500,2020,255
+116,Hawaii,7,Toyota RAV4,2023,209
+117,Hawaii,8,Nissan Altima,2020,215
+118,Hawaii,9,Acura Integra,2023,190
+119,Hawaii,10,Honda Civic,2023,161
+120,Idaho,1,Jeep Grand Cherokee,2022,409
+121,Idaho,2,Kia Forte,2021,368
+122,Idaho,3,Chevrolet Malibu,2022,319
+123,Idaho,4,Ford Explorer,2022,290
+124,Idaho,5,Hyundai Elantra,2021,257
+125,Idaho,6,Nissan Altima,2020,250
+126,Idaho,7,GMC Sierra 1500,2021,242
+127,Idaho,8,Subaru Outback,2021,207
+128,Idaho,9,Honda Civic,2023,192
+129,Idaho,10,Chevrolet Tahoe,2021,180
+130,Illinois,1,Hyundai Elantra,2021,3944
+131,Illinois,2,Chevrolet Malibu,2022,3865
+132,Illinois,3,Ford Explorer,2022,3457
+133,Illinois,4,Toyota Corolla,2022,2849
+134,Illinois,5,Chevrolet Tahoe,2020,2798
+135,Illinois,6,Honda Accord,2021,2522
+136,Illinois,7,Tesla Model 3,2021,2302
+137,Illinois,8,Ford F-150,2022,2007
+138,Illinois,9,Dodge Charger,2022,2108
+139,Illinois,10,GMC Sierra 1500,2022,1957
+140,Indiana,1,Nissan Altima,2021,1499
+141,Indiana,2,Hyundai Sonata,2022,1386
+142,Indiana,3,Dodge Charger,2020,1114
+143,Indiana,4,GMC Sierra 1500,2020,1122
+144,Indiana,5,Tesla Model 3,2021,1052
+145,Indiana,6,Chevrolet Malibu,2022,993
+146,Indiana,7,Chevrolet Silverado 1500,2021,800
+147,Indiana,8,Honda Accord,2022,733
+148,Indiana,9,Honda Civic,2020,717
+149,Indiana,10,Acura Integra,2023,648
+150,Iowa,1,Toyota Corolla,2021,557
+151,Iowa,2,Honda Civic,2023,519
+152,Iowa,3,Chevrolet Silverado 1500,2023,486
+153,Iowa,4,Acura Integra,2022,501
+154,Iowa,5,Dodge Charger,2022,460
+155,Iowa,6,Nissan Altima,2022,400
+156,Iowa,7,Hyundai Sonata,2020,376
+157,Iowa,8,Chevrolet Malibu,2022,313
+158,Iowa,9,Nissan Sentra,2020,314
+159,Iowa,10,Chevrolet Tahoe,2019,304
+160,Kansas,1,Toyota RAV4,2023,507
+161,Kansas,2,Honda Civic,2023,486
+162,Kansas,3,Ram 1500,2020,421
+163,Kansas,4,Honda Accord,2019,429
+164,Kansas,5,Chevrolet Tahoe,2022,370
+165,Kansas,6,Chevrolet Silverado 1500,2023,339
+166,Kansas,7,Toyota Camry,2022,311
+167,Kansas,8,Ford F-150,2023,288
+168,Kansas,9,Nissan Altima,2021,273
+169,Kansas,10,Kia Forte,2023,260
+170,Kentucky,1,Honda CR-V,2023,741
+171,Kentucky,2,Toyota Corolla,2022,742
+172,Kentucky,3,Chevrolet Malibu,2019,671
+173,Kentucky,4,Ram 1500,2022,568
+174,Kentucky,5,Acura Integra,2022,505
+175,Kentucky,6,Toyota RAV4,2023,502
+176,Kentucky,7,Chevrolet Tahoe,2019,443
+177,Kentucky,8,Toyota Camry,2024,441
+178,Kentucky,9,Ford Explorer,2023,402
+179,Kentucky,10,Honda Accord,2021,347
+180,Louisiana,1,Ford F-150,2022,798
+181,Louisiana,2,Chevrolet Silverado 1500,2021,723
+182,Louisiana,3,Toyota Corolla,2021,675
+183,Louisiana,4,Hyundai Elantra,2021,601
+184,Louisiana,5,Hyundai Sonata,2020,593
+185,Louisiana,6,Toyota Camry,2021,487
+186,Louisiana,7,Nissan Altima,2020,477
+187,Louisiana,8,Ram 1500,2021,428
+188,Louisiana,9,Jeep Grand Cherokee,2023,395
+189,Louisiana,10,Kia Forte,2022,376
+190,Maine,1,Ford Explorer,2022,346
+191,Maine,2,Hyundai Sonata,2023,325
+192,Maine,3,Subaru Outback,2022,303
+193,Maine,4,Honda Civic,2022,246
+194,Maine,5,Dodge Charger,2019,246
+195,Maine,6,Ram 1500,2022,231
+196,Maine,7,Toyota Corolla,2022,200
+197,Maine,8,Chevrolet Silverado 1500,2021,184
+198,Maine,9,Nissan Altima,2021,165
+199,Maine,10,Hyundai Elantra,2020,151
+200,Maryland,1,Kia Forte,2022,1164
+201,Maryland,2,Nissan Altima,2021,1099
+202,Maryland,3,Acura Integra,2023,1044
+203,Maryland,4,Subaru Outback,2020,961
+204,Maryland,5,Chevrolet Silverado 1500,2020,853
+205,Maryland,6,Hyundai Elantra,2019,781
+206,Maryland,7,Toyota Corolla,2020,699
+207,Maryland,8,Honda Accord,2020,633
+208,Maryland,9,Ram 1500,2019,664
+209,Maryland,10,Hyundai Sonata,2023,524
+210,Massachusetts,1,Honda Civic,2021,1014
+211,Massachusetts,2,Hyundai Elantra,2022,877
+212,Massachusetts,3,Kia Optima,2020,876
+213,Massachusetts,4,Ram 1500,2022,758
+214,Massachusetts,5,Toyota RAV4,2024,712
+215,Massachusetts,6,Nissan Sentra,2021,708
+216,Massachusetts,7,Dodge Charger,2019,616
+217,Massachusetts,8,Ford Explorer,2021,553
+218,Massachusetts,9,Chevrolet Malibu,2019,481
+219,Massachusetts,10,Hyundai Sonata,2020,458
+220,Michigan,1,Jeep Grand Cherokee,2020,2398
+221,Michigan,2,Toyota RAV4,2022,1954
+222,Michigan,3,Nissan Sentra,2021,2033
+223,Michigan,4,Chevrolet Tahoe,2019,1893
+224,Michigan,5,Ram 1500,2021,1552
+225,Michigan,6,Chevrolet Malibu,2022,1495
+226,Michigan,7,Toyota Corolla,2023,1346
+227,Michigan,8,Honda Accord,2021,1207
+228,Michigan,9,Hyundai Sonata,2021,1181
+229,Michigan,10,Ford F-150,2021,1040
+230,Minnesota,1,Toyota Camry,2021,931
+231,Minnesota,2,Honda CR-V,2022,855
+232,Minnesota,3,Toyota RAV4,2023,767
+233,Minnesota,4,Kia Optima,2019,785
+234,Minnesota,5,Kia Forte,2022,718
+235,Minnesota,6,Chevrolet Tahoe,2020,594
+236,Minnesota,7,Toyota Corolla,2021,606
+237,Minnesota,8,Hyundai Elantra,2020,495
+238,Minnesota,9,Ford Explorer,2020,476
+239,Minnesota,10,Subaru Outback,2021,480
+240,Mississippi,1,Toyota Camry,2024,576
+241,Mississippi,2,Dodge Charger,2019,530
+242,Mississippi,3,Subaru Outback,2023,507
+243,Mississippi,4,Kia Optima,2019,424
+244,Mississippi,5,Chevrolet Silverado 1500,2022,411
+245,Mississippi,6,GMC Sierra 1500,2020,380
+246,Mississippi,7,Hyundai Sonata,2020,332
+247,Mississippi,8,Ford Explorer,2020,340
+248,Mississippi,9,Chevrolet Malibu,2021,298
+249,Mississippi,10,Jeep Grand Cherokee,2020,294
+250,Missouri,1,Ford Explorer,2022,1203
+251,Missouri,2,Kia Forte,2022,1280
+252,Missouri,3,GMC Sierra 1500,2020,1051
+253,Missouri,4,Subaru Outback,2020,989
+254,Missouri,5,Toyota Camry,2023,981
+255,Missouri,6,Toyota RAV4,2023,886
+256,Missouri,7,Acura Integra,2024,729
+257,Missouri,8,Nissan Altima,2023,703
+258,Missouri,9,Nissan Sentra,2020,680
+259,Missouri,10,Toyota Corolla,2023,647
+260,Montana,1,Chevrolet Malibu,2021,280
+261,Montana,2,Honda CR-V,2023,263
+262,Montana,3,Toyota RAV4,2024,247
+263,Montana,4,Chevrolet Silverado 1500,2022,230
+264,Montana,5,Ford F-150,2022,184
+265,Montana,6,GMC Sierra 1500,2020,190
+266,Montana,7,Acura Integra,2023,159
+267,Montana,8,Toyota Corolla,2021,168
+268,Montana,9,Tesla Model 3,2021,138
+269,Montana,10,Toyota Camry,2023,134
+270,Nebraska,1,Toyota RAV4,2021,411
+271,Nebraska,2,Honda Accord,2020,369
+272,Nebraska,3,Ford Explorer,2020,346
+273,Nebraska,4,Toyota Corolla,2023,295
+274,Nebraska,5,Tesla Model 3,2023,267
+275,Nebraska,6,Nissan Sentra,2019,246
+276,Nebraska,7,Jeep Grand Cherokee,2022,251
+277,Nebraska,8,Nissan Altima,2023,236
+278,Nebraska,9,Subaru Outback,2020,197
+279,Nebraska,10,Honda Civic,2020,188
+280,Nevada,1,Honda CR-V,2022,486
+281,Nevada,2,Acura Integra,2023,462
+282,Nevada,3,Kia Optima,2020,415
+283,Nevada,4,Toyota Camry,2022,399
+284,Nevada,5,Kia Forte,2023,359
+285,Nevada,6,Ram 1500,2021,313
+286,Nevada,7,Hyundai Elantra,2020,278
+287,Nevada,8,Subaru Outback,2020,249
+288,Nevada,9,Ford F-150,2024,236
+289,Nevada,10,Dodge Charger,2020,221
+290,New Hampshire,1,Chevrolet Malibu,2022,334
+291,New Hampshire,2,Toyota RAV4,2023,285
+292,New Hampshire,3,Nissan Sentra,2019,272
+293,New Hampshire,4,Ford Explorer,2021,246
+294,New Hampshire,5,Ram 1500,2021,221
+295,New Hampshire,6,Kia Optima,2021,195
+296,New Hampshire,7,Acura Integra,2021,206
+297,New Hampshire,8,Kia Forte,2023,173
+298,New Hampshire,9,Toyota Corolla,2021,152
+299,New Hampshire,10,Honda Accord,2022,153
+300,New Jersey,1,Nissan Sentra,2020,1961
+301,New Jersey,2,Chevrolet Silverado 1500,2023,1837
+302,New Jersey,3,Ram 1500,2020,1583
+303,New Jersey,4,Ford F-150,2021,1536
+304,New Jersey,5,Subaru Outback,2021,1410
+305,New Jersey,6,Honda Civic,2021,1155
+306,New Jersey,7,Honda CR-V,2022,1165
+307,New Jersey,8,Chevrolet Tahoe,2020,1066
+308,New Jersey,9,Tesla Model 3,2021,951
+309,New Jersey,10,Kia Forte,2023,834
+310,New Mexico,1,Chevrolet Tahoe,2020,425
+311,New Mexico,2,Nissan Altima,2021,419
+312,New Mexico,3,Toyota Corolla,2021,386
+313,New Mexico,4,Ford Explorer,2022,361
+314,New Mexico,5,Subaru Outback,2022,326
+315,New Mexico,6,Jeep Grand Cherokee,2022,292
+316,New Mexico,7,Tesla Model 3,2021,251
+317,New Mexico,8,Chevrolet Malibu,2022,236
+318,New Mexico,9,Nissan Sentra,2021,220
+319,New Mexico,10,Kia Optima,2019,226
+320,New York,1,Acura Integra,2022,4163
+321,New York,2,Honda CR-V,2024,4097
+322,New York,3,Ram 1500,2019,3596
+323,New York,4,Toyota Corolla,2023,3238
+324,New York,5,Dodge Charger,2020,2830
+325,New York,6,Hyundai Elantra,2021,2777
+326,New York,7,Nissan Sentra,2019,2536
+327,New York,8,Chevrolet Silverado 1500,2023,2498
+328,New York,9,Tesla Model 3,2021,2241
+329,New York,10,Honda Civic,2020,1982
+330,North Carolina,1,Chevrolet Malibu,2022,2589
+331,North Carolina,2,Nissan Sentra,2020,2243
+332,North Carolina,3,Ford Explorer,2020,2190
+333,North Carolina,4,Chevrolet Tahoe,2019,1999
+334,North Carolina,5,Acura Integra,2024,1728
+335,North Carolina,6,Dodge Charger,2021,1676
+336,North Carolina,7,Tesla Model 3,2024,1530
+337,North Carolina,8,Toyota Camry,2024,1355
+338,North Carolina,9,Toyota RAV4,2023,1270
+339,North Carolina,10,Ford F-150,2023,1183
+340,North Dakota,1,Kia Optima,2020,203
+341,North Dakota,2,Chevrolet Tahoe,2019,216
+342,North Dakota,3,Tesla Model 3,2021,193
+343,North Dakota,4,Hyundai Elantra,2021,172
+344,North Dakota,5,Ram 1500,2022,167
+345,North Dakota,6,Honda CR-V,2024,147
+346,North Dakota,7,GMC Sierra 1500,2022,124
+347,North Dakota,8,Kia Forte,2022,131
+348,North Dakota,9,Honda Accord,2019,110
+349,North Dakota,10,Jeep Grand Cherokee,2020,98
+350,Ohio,1,Kia Optima,2020,2442
+351,Ohio,2,Hyundai Sonata,2022,2444
+352,Ohio,3,Toyota Corolla,2020,2361
+353,Ohio,4,Nissan Sentra,2020,2083
+354,Ohio,5,Jeep Grand Cherokee,2022,1774
+355,Ohio,6,Tesla Model 3,2024,1630
+356,Ohio,7,Ford Explorer,2022,1525
+357,Ohio,8,GMC Sierra 1500,2021,1342
+358,Ohio,9,Chevrolet Tahoe,2020,1262
+359,Ohio,10,Acura Integra,2022,1270
+360,Oklahoma,1,Chevrolet Tahoe,2022,687
+361,Oklahoma,2,Kia Optima,2021,659
+362,Oklahoma,3,Nissan Sentra,2019,579
+363,Oklahoma,4,Ram 1500,2021,507
+364,Oklahoma,5,Honda CR-V,2021,510
+365,Oklahoma,6,Kia Forte,2021,473
+366,Oklahoma,7,Ford Explorer,2022,444
+367,Oklahoma,8,Ford F-150,2021,369
+368,Oklahoma,9,Hyundai Elantra,2019,367
+369,Oklahoma,10,Honda Civic,2020,318
+370,Oregon,1,Kia Forte,2022,686
+371,Oregon,2,Chevrolet Silverado 1500,2021,601
+372,Oregon,3,Chevrolet Tahoe,2020,565
+373,Oregon,4,Honda Civic,2020,584
+374,Oregon,5,Nissan Sentra,2021,470
+375,Oregon,6,Nissan Altima,2022,468
+376,Oregon,7,Hyundai Sonata,2020,393
+377,Oregon,8,Subaru Outback,2023,378
+378,Oregon,9,Toyota RAV4,2022,385
+379,Oregon,10,Acura Integra,2021,323
+380,Pennsylvania,1,Hyundai Elantra,2020,2366
+381,Pennsylvania,2,Toyota RAV4,2024,2329
+382,Pennsylvania,3,Nissan Sentra,2019,2252
+383,Pennsylvania,4,Ford Explorer,2022,2040
+384,Pennsylvania,5,Dodge Charger,2020,1839
+385,Pennsylvania,6,Chevrolet Silverado 1500,2023,1521
+386,Pennsylvania,7,Tesla Model 3,2022,1569
+387,Pennsylvania,8,Honda CR-V,2022,1363
+388,Pennsylvania,9,Acura Integra,2024,1207
+389,Pennsylvania,10,Chevrolet Malibu,2019,1214
+390,Rhode Island,1,Acura Integra,2024,309
+391,Rhode Island,2,Ford F-150,2022,289
+392,Rhode Island,3,Jeep Grand Cherokee,2021,250
+393,Rhode Island,4,GMC Sierra 1500,2020,220
+394,Rhode Island,5,Chevrolet Malibu,2021,200
+395,Rhode Island,6,Honda CR-V,2022,188
+396,Rhode Island,7,Honda Civic,2021,185
+397,Rhode Island,8,Kia Optima,2019,178
+398,Rhode Island,9,Tesla Model 3,2024,155
+399,Rhode Island,10,Hyundai Sonata,2023,144
+400,South Carolina,1,Kia Optima,2019,889
+401,South Carolina,2,Toyota Corolla,2021,866
+402,South Carolina,3,Hyundai Sonata,2023,778
+403,South Carolina,4,Kia Forte,2023,750
+404,South Carolina,5,Nissan Altima,2021,664
+405,South Carolina,6,Tesla Model 3,2021,597
+406,South Carolina,7,Ford F-150,2023,527
+407,South Carolina,8,Honda Civic,2023,484
+408,South Carolina,9,Nissan Sentra,2022,461
+409,South Carolina,10,Chevrolet Tahoe,2022,446
+410,South Dakota,1,Acura Integra,2023,247
+411,South Dakota,2,Jeep Grand Cherokee,2022,206
+412,South Dakota,3,Ram 1500,2022,211
+413,South Dakota,4,Kia Forte,2021,186
+414,South Dakota,5,Honda CR-V,2022,158
+415,South Dakota,6,Subaru Outback,2022,148
+416,South Dakota,7,Hyundai Sonata,2021,150
+417,South Dakota,8,Toyota Corolla,2021,126
+418,South Dakota,9,Hyundai Elantra,2019,127
+419,South Dakota,10,Ford F-150,2021,118
+420,Tennessee,1,GMC Sierra 1500,2023,1434
+421,Tennessee,2,Honda CR-V,2021,1490
+422,Tennessee,3,Acura Integra,2021,1306
+423,Tennessee,4,Honda Civic,2021,1124
+424,Tennessee,5,Honda Accord,2021,1066
+425,Tennessee,6,Toyota RAV4,2024,940
+426,Tennessee,7,Toyota Corolla,2022,886
+427,Tennessee,8,Jeep Grand Cherokee,2023,857
+428,Tennessee,9,Subaru Outback,2023,769
+429,Tennessee,10,Hyundai Sonata,2021,738
+430,Texas,1,Toyota RAV4,2022,12216
+431,Texas,2,Subaru Outback,2020,10957
+432,Texas,3,Acura Integra,2021,10786
+433,Texas,4,Kia Forte,2022,9259
+434,Texas,5,Honda Accord,2019,9268
+435,Texas,6,Ram 1500,2020,7673
+436,Texas,7,Chevrolet Malibu,2021,8169
+437,Texas,8,Nissan Altima,2022,6893
+438,Texas,9,Dodge Charger,2019,5992
+439,Texas,10,Ford Explorer,2020,6165
+440,Utah,1,Chevrolet Silverado 1500,2021,522
+441,Utah,2,Dodge Charger,2022,440
+442,Utah,3,Chevrolet Malibu,2021,453
+443,Utah,4,Toyota Camry,2024,392
+444,Utah,5,Toyota Corolla,2023,376
+445,Utah,6,Honda CR-V,2022,353
+446,Utah,7,Honda Civic,2020,323
+447,Utah,8,Kia Forte,2021,279
+448,Utah,9,Nissan Sentra,2020,256
+449,Utah,10,Jeep Grand Cherokee,2021,241
+450,Vermont,1,Toyota Camry,2021,211
+451,Vermont,2,Ford F-150,2021,183
+452,Vermont,3,Chevrolet Tahoe,2020,178
+453,Vermont,4,Tesla Model 3,2023,146
+454,Vermont,5,Subaru Outback,2023,143
+455,Vermont,6,Chevrolet Silverado 1500,2021,127
+456,Vermont,7,Kia Optima,2021,122
+457,Vermont,8,Toyota RAV4,2024,104
+458,Vermont,9,Hyundai Elantra,2021,102
+459,Vermont,10,Honda CR-V,2024,96
+460,Virginia,1,Chevrolet Malibu,2020,1693
+461,Virginia,2,Subaru Outback,2023,1759
+462,Virginia,3,Hyundai Elantra,2021,1624
+463,Virginia,4,Honda Accord,2019,1431
+464,Virginia,5,Honda CR-V,2024,1347
+465,Virginia,6,GMC Sierra 1500,2020,1133
+466,Virginia,7,Ram 1500,2019,1005
+467,Virginia,8,Toyota Camry,2022,1082
+468,Virginia,9,Dodge Charger,2022,891
+469,Virginia,10,Kia Optima,2019,912
+470,Washington,1,Chevrolet Malibu,2021,1681
+471,Washington,2,Nissan Sentra,2021,1521
+472,Washington,3,Hyundai Sonata,2022,1502
+473,Washington,4,Ram 1500,2022,1247
+474,Washington,5,Honda Accord,2021,1220
+475,Washington,6,Nissan Altima,2021,1058
+476,Washington,7,Ford Explorer,2022,990
+477,Washington,8,Dodge Charger,2021,929
+478,Washington,9,Subaru Outback,2021,863
+479,Washington,10,Acura Integra,2024,773
+480,West Virginia,1,Toyota RAV4,2023,410
+481,West Virginia,2,Toyota Camry,2024,379
+482,West Virginia,3,Hyundai Elantra,2020,379
+483,West Virginia,4,Hyundai Sonata,2022,305
+484,West Virginia,5,Ford F-150,2023,298
+485,West Virginia,6,Chevrolet Silverado 1500,2022,271
+486,West Virginia,7,Nissan Altima,2020,267
+487,West Virginia,8,Honda Civic,2020,225
+488,West Virginia,9,Ford Explorer,2022,205
+489,West Virginia,10,Chevrolet Malibu,2019,206
+490,Wisconsin,1,Kia Forte,2021,1138
+491,Wisconsin,2,Ford F-150,2021,935
+492,Wisconsin,3,Toyota RAV4,2021,886
+493,Wisconsin,4,Hyundai Elantra,2021,847
+494,Wisconsin,5,Hyundai Sonata,2022,793
+495,Wisconsin,6,GMC Sierra 1500,2022,765
+496,Wisconsin,7,Ram 1500,2020,677
+497,Wisconsin,8,Tesla Model 3,2021,567
+498,Wisconsin,9,Honda Civic,2021,576
+499,Wisconsin,10,Chevrolet Tahoe,2020,493
+500,Wyoming,1,Subaru Outback,2022,179
+501,Wyoming,2,Chevrolet Silverado 1500,2020,156
+502,Wyoming,3,Ford F-150,2023,145
+503,Wyoming,4,Tesla Model 3,2024,143
+504,Wyoming,5,Acura Integra,2021,134
+505,Wyoming,6,Hyundai Elantra,2020,120
+506,Wyoming,7,Ram 1500,2022,111
+507,Wyoming,8,Nissan Sentra,2021,103
+508,Wyoming,9,Jeep Grand Cherokee,2022,96
+509,Wyoming,10,Dodge Charger,2020,90
